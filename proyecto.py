@@ -4,9 +4,9 @@
 Título del proyecto:
 Fecha:
 
-Participantes:
-A01066843 - Facundo Bautista Barbera - Ingeniera
-A00000000 - Nombre
+Autores:
+A01066843 - Facundo Bautista Barbera - Avenida de Ciencias Aplicadas
+A01067607 - Alejandro Cazares Juarez - Avenida de Innovación y Transformación
 A00000000 - Nombre
 
 Version de Python: 3.10.0
@@ -19,22 +19,26 @@ trabajadores = list()
 # Esta clase actua como un modelo para todos los trabajadores
 class Trabajador:
 
+    # Constructor de la clase
     def __init__(self, nombre, grado_de_estudios, habilidad):
         self.nombre = nombre
         self.grado_de_estudios = grado_de_estudios
         self.habilidad = habilidad
 
+    # Método de clase para cambiar el nombre de un trabajador
     def cambiar_nombre(self, nuevo_nombre):
         self.nombre = nuevo_nombre
 
+    # Método de clase para cambiar el grado de estudios de un trabajador
     def cambiar_grado_de_estudios(self, nuevo_grado_de_estudios):
         self.grado_de_estudios = nuevo_grado_de_estudios
 
+    # Método de clase para cambiar la habilidad de un trabajador
     def cambiar_habilidad(self, nueva_habilidad):
         self.habilidad = nueva_habilidad
 
 
-# Función principal
+# Función principal y menu principal
 def main():
     # Bucle de menu principal
     while True:
