@@ -41,9 +41,10 @@ def main():
 
         # Mostrar opciones
         print('----')  # Separador
-        print(f"1 - Consultar o modificar trabajador.\n"
-              f"2 - Register nuevo trabajador.\n"
-              f"3 - Salir.")
+        print(f'1 - Consultar o modificar trabajador.')
+        print(f'2 - Registrar trabajador.')
+        print(f'3 - Listar trabajadores.')
+        print(f'4 - Salir.')
 
         # Pedir selección
         while True:
@@ -51,14 +52,14 @@ def main():
             seleccion = input('Seleccione una opción: ')
 
             # Revisar si la selección es válida
-            if seleccion in ['1', '2', '3']:
+            if seleccion in ['1', '2', '3', '4']:
 
                 # Decidir que hacer y salir del bucle
-                if seleccion in ['1', '2']:
+                if seleccion in ['1', '2', '3']:
                     break
 
                 # Salir del programa
-                elif seleccion == '3':
+                elif seleccion == '4':
                     exit()
 
             # Respuesta no fue válida
@@ -69,6 +70,7 @@ def main():
         if seleccion == '1':
 
             # Revisar si hay trabajadores registrados
+            print('----')  # Separador
             if len(trabajadores) == 0:
                 print('No hay trabajadores registrados.')
                 continue
@@ -108,9 +110,27 @@ def main():
                 menu_editar_trabajador(trabajadores[seleccion], seleccion)
 
         elif seleccion == '2':
+            print('----')  # Separador
             # Registrar nuevo trabajador
             trabajador = registrar_trabajador()
             print(f"Trabajador registrado: {trabajador.nombre}")
+
+        elif seleccion == '3':
+            if len(trabajadores) != 0:
+                # Listar trabajadores
+                print('----')  # Separador
+                print('Trabajadores registrados:')
+
+                for trabajador in trabajadores:
+                    print('----')  # Separador
+                    print(f'Indice de trabajador: {trabajadores.index(trabajador)}')
+                    print(f'Nombre: {trabajador.nombre}')
+                    print(f'Grado de estudios: {trabajador.grado_de_estudios}')
+                    print(f'Habilidad: {trabajador.habilidad}')
+
+            else:
+                print('----')  # Separador
+                print('No hay trabajadores registrados.')
 
 
 # Menu para editar trabajador
