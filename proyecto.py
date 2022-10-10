@@ -146,6 +146,7 @@ def menu_editar_trabajador(trabajador, numero_de_trabajador):
         print(f"2 - Cambiar grado de estudios.")
         print(f"3 - Cambiar habilidad.")
         print(f"4 - Borrar trabajador.")
+        print(f"5 - Salir.")
 
         while True:
             seleccion = input('Seleccione una opción: ')
@@ -177,6 +178,10 @@ def menu_editar_trabajador(trabajador, numero_de_trabajador):
         elif seleccion == '4':
             trabajadores.pop(numero_de_trabajador)
             print('Trabajador borrado.')
+            break
+
+        # Salir
+        elif seleccion == '5':
             break
 
         # Preguntar si se desea editar otro dato
