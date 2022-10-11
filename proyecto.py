@@ -113,12 +113,14 @@ def main():
                 # Editar trabajador
                 menu_editar_trabajador(trabajadores[seleccion], seleccion)
 
+        # Registrar trabajador
         elif seleccion == '2':
             print('----')  # Separador
             # Registrar nuevo trabajador
             trabajador = registrar_trabajador()
             print(f"Trabajador registrado: {trabajador.nombre}")
 
+        # Listar trabajadores
         elif seleccion == '3':
             if len(trabajadores) != 0:
                 # Listar trabajadores
@@ -148,6 +150,7 @@ def menu_editar_trabajador(trabajador, numero_de_trabajador):
         print(f"4 - Borrar trabajador.")
         print(f"5 - Salir.")
 
+        # Pedir selección
         while True:
             seleccion = input('Seleccione una opción: ')
 
