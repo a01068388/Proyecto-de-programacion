@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 """
-Título del proyecto:
-Fecha:
+Título del proyecto: Intregrador
+Fecha: 10/oct/22
 
 Autores:
 A01066843 - Facundo Bautista Barbera - Avenida de Ciencias Aplicadas
